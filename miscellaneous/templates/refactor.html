@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap5 核心 CSS -->
+    <link rel="stylesheet"
+          href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
+
+    <!-- Bootstrap5 核心 JavaScript -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap icon -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <!-- JQuery 核心 JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <!-- 網頁圖標 -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+    <title>重構 (Refactor)</title>
+</head>
+<body class="bg-light">
+<div class="container">
+    <!-- 標題 -->
+    <div class="row text-center py-3">
+        <h1>重構 (Refactor)</h1>
+    </div>
+
+    <!-- 內容 -->
+    <div class="row fs-4 text-center gap-5">
+        <div class="row py-3">
+            <div class="col-12 fs-3">
+                <figure>
+                    <blockquote class="blockquote">
+                        <p>在軟體工程學裡，重構代碼一詞通常是指在不改變代碼的外部行為情況下而修改原始碼，有時非正式地稱為「清理乾淨」</p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer">
+                        <cite title="Source Title">維基百科</cite>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col text-start">
+                <h2>目的</h2>
+                <ol class="ms-4">
+                    <li>讓程式碼更容易理解（easier to understand）</li>
+                    <li>讓程式碼更容易修改（cheaper to modify）</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col text-start">
+                <h2>什麼時候進行?</h2>
+                <ol class="ms-4">
+                    <li>試圖理解某段程式碼時</li>
+                    <li>路過看到</li>
+                    <li>Code Review</li>
+                    <li class="text-danger fw-bold">不該安排時間特地重構</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col text-start">
+                <h2>如何進行重構?</h2>
+                <ol class="ms-4">
+                    <li>自我測試（Self-testing）</li>
+                    <li>兩頂帽子（The Two Hats）</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col text-start">
+                <h2>結論</h2>
+                <ol class="ms-4">
+                    <li>該怎麼跟主管說?</li>
+                    <li>融入日常的開發流程中</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <br>
+
+</div>
+</body>
+</html>
