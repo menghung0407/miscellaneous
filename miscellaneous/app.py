@@ -81,6 +81,49 @@ def statechart(page_number):
                            view_model=view_model)
 
 
+@app.route('/activity_diagram/<int:page_number>')
+def activity_diagram(page_number):
+    logger.info(f'活動圖 {page_number}')
+
+    item_name = 'activity_diagram'
+    limit_page = 1
+
+    previous_page = page_number - 1
+    if previous_page < 0:
+        previous_page = 0
+
+    next_page = page_number + 1
+    if next_page > (limit_page - 1):
+        next_page = 0
+
+    view_model = {
+        'previous_page_route': f'/{item_name}/{previous_page}',
+        'next_page_route': f'/{item_name}/{next_page}'
+    }
+
+    return render_template(f'{item_name}/{page_number}.html', view_model=view_model)
+
+
+@app.route('/test_engineer/<int:page_number>')
+def test_engineer(page_number):
+    logger.info(f'測試工程師 {page_number}')
+    previous_page = page_number - 1
+    next_page = page_number + 1
+
+    if previous_page < 0:
+        previous_page = 0
+
+    if next_page > 0:
+        next_page = 0
+
+    view_model = {
+        'previous_page_route': f'/test_engineer/{previous_page}',
+        'next_page_route': f'/test_engineer/{next_page}'
+    }
+
+    return render_template(f'test_engineer/{page_number}.html', view_model=view_model)
+
+
 if __name__ == '__main__':
     app.run(
         debug=True,
