@@ -124,6 +124,28 @@ def test_engineer(page_number):
     return render_template(f'test_engineer/{page_number}.html', view_model=view_model)
 
 
+@app.route('/selenium/<int:page_number>')
+def selenium(page_number):
+    logger.info(f'Selenium {page_number}')
+    item_name = 'selenium'
+    limit_page = 17
+
+    previous_page = page_number - 1
+    if previous_page < 0:
+        previous_page = 0
+
+    next_page = page_number + 1
+    if next_page > (limit_page - 1):
+        next_page = 0
+
+    view_model = {
+        'previous_page_route': f'/{item_name}/{previous_page}',
+        'next_page_route': f'/{item_name}/{next_page}'
+    }
+
+    return render_template(f'{item_name}/{page_number}.html', view_model=view_model)
+
+
 if __name__ == '__main__':
     app.run(
         debug=True,
