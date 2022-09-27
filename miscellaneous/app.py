@@ -146,6 +146,50 @@ def selenium(page_number):
     return render_template(f'{item_name}/{page_number}.html', view_model=view_model)
 
 
+@app.route('/acid/<int:page_number>')
+def acid(page_number):
+    logger.info(f'acid {page_number}')
+    item_name = 'acid'
+    limit_page = 11
+
+    previous_page = page_number - 1
+    if previous_page < 0:
+        previous_page = 0
+
+    next_page = page_number + 1
+    if next_page > (limit_page - 1):
+        next_page = 0
+
+    view_model = {
+        'previous_page_route': f'/{item_name}/{previous_page}',
+        'next_page_route': f'/{item_name}/{next_page}'
+    }
+
+    return render_template(f'{item_name}/{page_number}.html', view_model=view_model)
+
+
+@app.route('/book/<int:page_number>')
+def book(page_number):
+    logger.info(f'book {page_number}')
+    item_name = 'book'
+    limit_page = 2
+
+    previous_page = page_number - 1
+    if previous_page < 0:
+        previous_page = 0
+
+    next_page = page_number + 1
+    if next_page > (limit_page - 1):
+        next_page = 0
+
+    view_model = {
+        'previous_page_route': f'/{item_name}/{previous_page}',
+        'next_page_route': f'/{item_name}/{next_page}'
+    }
+
+    return render_template(f'{item_name}/{page_number}.html', view_model=view_model)
+
+
 if __name__ == '__main__':
     app.run(
         debug=True,

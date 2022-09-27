@@ -21,33 +21,47 @@
     <!-- 網頁圖標 -->
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 
-    <title>Selenium</title>
+    <title>ACID</title>
 </head>
 <body class="bg-light">
 <div class="container">
     <!-- 內容 -->
-    <div class="row text-start py-5">
-        <div class="row py-5">
-            <div class="col-12">
-                <h1 class="fw-bold">一、Selenium WebDriver</h1>
-            </div>
+    <div class="row my-5 mx-5 gap-4">
+        <div class="col-12">
+            <h1 class="display-5 fw-bold">隔離機制和相關錯誤</h1>
         </div>
-
-        <div class="row">
-            <div class="col-12">
-                <ul class="fs-2 text-start">
-                    <li>需由程式碼控制
-                        <ul>
-                            <li>Java、Python、C#、Ruby、JavaScript、Kotlin</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+        <div class="col-12 ms-5">
+            <ul class="fs-2 text-start">
+                <li>背後運行的核心概念 --- <strong class="fs-1 text-danger">鎖 (Lock)</strong></li>
+            </ul>
+        </div>
+        <div class="col-5 ms-5">
+            <ul class="fs-2 text-start">
+                <li>3 種錯誤
+                    <ul>
+                        <li>Dirty Read</li>
+                        <li>Non-repeatable read</li>
+                        <li>Phantom Read</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="col-5">
+            <ul class="fs-2 text-start">
+                <li>4 種隔離機制
+                    <ul>
+                        <li>Read Uncommitted</li>
+                        <li>Read Committed</li>
+                        <li>Repeatable Read</li>
+                        <li>Serializable</li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </div>
 
     <!-- 頁 控制-->
-    <div class="row justify-content-between text-center py-5 display-1 fixed-bottom">
+    <div class="row justify-content-between text-center my-5 display-1 fixed-bottom">
         <div class="col-2">
             <a href="{{view_model.previous_page_route}}"><i class="bi bi-arrow-left-square"></i></a>
         </div>

@@ -21,33 +21,34 @@
     <!-- 網頁圖標 -->
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 
-    <title>Selenium</title>
+    <title>ACID</title>
 </head>
 <body class="bg-light">
 <div class="container">
     <!-- 內容 -->
-    <div class="row text-start py-5">
-        <div class="row py-5">
-            <div class="col-12">
-                <h1 class="fw-bold">一、Selenium WebDriver</h1>
-            </div>
+    <div class="row my-5 mx-5 gap-4">
+        <div class="col-12">
+            <h1 class="display-5 fw-bold">Isolation 隔離性</h1>
         </div>
-
-        <div class="row">
-            <div class="col-12">
-                <ul class="fs-2 text-start">
-                    <li>需由程式碼控制
-                        <ul>
-                            <li>Java、Python、C#、Ruby、JavaScript、Kotlin</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+        <div class="col-12 mx-5">
+            <ul class="fs-2 text-start">
+                <li>在 A transaction 過程中，不會被其他 transaction 干擾</li>
+                <li>例子: Steven 給 B 和 C 各 100$
+                    <ul>
+                        <li>Steven 有 500$</li>
+                        <li>給 B 100$</li>
+                        <li>給 C 100$</li>
+                        <li>同時發生交易時...</li>
+                        <li>結果 Steven 剩 <strong class="text-danger">400$</strong></li>
+                        <li>(Steven 的嘴角上揚....)</li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </div>
 
     <!-- 頁 控制-->
-    <div class="row justify-content-between text-center py-5 display-1 fixed-bottom">
+    <div class="row justify-content-between text-center my-5 display-1 fixed-bottom">
         <div class="col-2">
             <a href="{{view_model.previous_page_route}}"><i class="bi bi-arrow-left-square"></i></a>
         </div>
