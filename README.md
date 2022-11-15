@@ -18,10 +18,5 @@
 - 流程圖
 - ACID
 - Selenium
-- 版本控制系統
+
 - 工程師詞彙
-- 技術債
-- IDE
-- 低 GI
-- CRM
-- Other
