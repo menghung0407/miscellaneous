@@ -26,16 +26,5 @@ def tree(page_number):
     return render_template(f'tree/tree_{page_number}.html')
 
 
-@app.route('/other/<int:page_number>')
-def other(page_number):
-    """其他"""
-    logger.info(f'other_{page_number}.html')
-    return render_template(f'other/other_{page_number}.html')
-
-
 if __name__ == '__main__':
-    app.run(
-        debug=True,
-        host='0.0.0.0',
-        port=7000
-    )
+    app.run(debug=True, host='0.0.0.0', port=7000)
