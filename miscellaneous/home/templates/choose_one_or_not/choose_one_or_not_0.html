@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap5 核心 CSS -->
+    <link rel="stylesheet"
+          href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
+
+    <!-- Bootstrap5 核心 JavaScript -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap icon -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <!-- JQuery 核心 JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <!-- 網頁圖標 -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+    <title>啟用或停用 + 啟用後擇一 Demo</title>
+</head>
+<body class="bg-light">
+<div class="container">
+    <!-- 內容 -->
+    <div class="row py-3 fs-1">
+        <div class="row py-5 my-5 bg-white border">
+            <div class="col-12 display-3 fw-bold text-success pb-5">
+                方案 A
+            </div>
+            <div class="col-auto">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        啟用
+                    </label>
+                </div>
+                <div id="radio">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+                               checked>
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            選我~~
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            選我! 選我!
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row py-5 my-5 bg-white border">
+            <div class="col-12 display-3 fw-bold text-success pb-5">
+                方案 B
+            </div>
+            <div class="col-auto">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="checkB">
+                    <label class="form-check-label" for="checkB">
+                        啟用
+                    </label>
+                </div>
+                <div id="radioB">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radioBoxB" id="radioBoxB1"
+                               checked>
+                        <label class="form-check-label" for="radioBoxB1">
+                            選我~~
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radioBoxB" id="radioBoxB2">
+                        <label class="form-check-label" for="radioBoxB2">
+                            選我! 選我!
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="{{url_for('home.static', filename='choose_one_or_not/choose_one_or_not.js')}}"></script>
+</body>
+</html>
