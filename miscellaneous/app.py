@@ -12,7 +12,8 @@ def create_app():
     from miscellaneous.home.views import home_blueprint
     app.register_blueprint(home_blueprint)
 
-    print(app.url_map)
+    from miscellaneous.home.views.http_only import http_only_blueprint
+    app.register_blueprint(http_only_blueprint)
 
     return app
 
